@@ -1,7 +1,119 @@
 @import "variables";
 @import "colors";
+@import "mixins";
 
-.main-container{
-    width: 100%;
-    max-width: 767.98px;
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    background-color: #f6f6f6;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    img{
+        width: 197px;
+        align-self: center;
+        padding: 25px 0 20px 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+    }
+    section{
+        background-color: #EAEAEA;
+        height: 50px;
+        align-items: center;
+        gap: 17px;
+        display: flex;
+        justify-content: center;
+        filter: drop-shadow(0px 2px 4px rgb(0,0,0,15%));
+
+    p{
+        font-size: 16px;
+        font-weight:500;
+        color: #353535;
+    }
+    i{
+        color: #353535;
+    }
+    }
+}
+
+.colonne{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    @include h1;
+}
+
+h2{
+    @include h2;
+}
+
+button{
+    @include button;
+}
+
+main{
+    h1{
+        text-align: left;
+        padding: 40px 0px 20px 20px;
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 20px;
+        li{
+            width: 5%;
+            padding: 4px;
+            border-radius: 15px;
+            background-color: $primaire;
+            text-align: center;
+            color: white;
+            font-size: 14.18px;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+.fonctionnement{
+    background-color: white;
+}
+
+.tutoriel{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: baseline;
+    margin-left: 30px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    filter: drop-shadow(0px 2px 4px rgb(0,0,0,15%));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+        i{
+            font-size: 20px;
+            color: #7E7E7E;
+        }
+}
+
+h3{
+    @include h3;
+}
+
+.alignement{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.numeros{
+    position: absolute;
 }
