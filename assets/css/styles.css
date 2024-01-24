@@ -71,7 +71,6 @@ button {
   margin-top: 25px;
   margin-bottom: 50px;
 }
-
 main h1 {
   text-align: left;
   padding: 40px 0px 20px 20px;
@@ -80,10 +79,11 @@ main ul {
   list-style-type: none;
   padding-left: 0;
   margin-left: 20px;
+  position: absolute;
+  z-index: 1;
 }
 main ul li {
-  width: 5%;
-  padding: 4px;
+  padding: 5px 9px;
   border-radius: 15px;
   background-color: #9356DC;
   text-align: center;
@@ -91,6 +91,7 @@ main ul li {
   font-size: 14.18px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 70px;
 }
 
 .fonctionnement {
@@ -109,6 +110,7 @@ main ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
+  padding-right: 70px;
   margin-right: 20px;
   margin-bottom: 25px;
 }
@@ -133,4 +135,105 @@ h3 {
 
 .numeros {
   position: absolute;
+  top: 5px;
+  z-index: 1;
+}
+
+.cards-fonctionnement {
+  margin-bottom: 30px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants h1 {
+  text-align: left;
+  margin: 0;
+  padding: 40px 0px 20px 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+}
+.card .card-txt {
+  padding-left: 15px;
+}
+.card h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  text-align: left;
+  margin: 20px 0px 0px 0px;
+}
+.card p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: black;
+  text-align: left;
+  margin-top: 5px;
+}
+.card i {
+  font-size: 25px;
+  color: black;
+}
+
+.restaurants-cards {
+  margin: 5px 15px 30px 15px;
+}
+.restaurants-cards a {
+  text-decoration: none;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 130px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 30px 15px;
+}
+footer h5 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+footer i {
+  color: white;
+  font-size: 16px;
+  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
