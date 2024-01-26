@@ -1,3 +1,9 @@
+@charset "UTF-8";
+/* Small devices (phones, less than 768px) */
+.main-container {
+  max-width: 767.98px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: auto;
@@ -36,7 +42,7 @@ nav section i {
 }
 
 .colonne {
-  display: flex;
+  display: grid;
   flex-direction: column;
 }
 
@@ -54,7 +60,7 @@ h2 {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  margin: auto;
+  margin: 0px 20px;
   padding-top: 15px;
 }
 
@@ -62,7 +68,6 @@ button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   height: 50px;
-  margin: 0px 75px;
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -70,7 +75,14 @@ button {
   color: white;
   margin-top: 25px;
   margin-bottom: 50px;
+  width: 218px;
+  justify-self: center;
 }
+button:hover {
+  opacity: 0.85;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
 main h1 {
   text-align: left;
   padding: 40px 0px 20px 20px;
@@ -118,6 +130,29 @@ main ul li {
   font-size: 20px;
   color: #7E7E7E;
 }
+.tutoriel--violet {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: baseline;
+  margin-left: 30px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 70px;
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+.tutoriel--violet i {
+  font-size: 20px;
+  color: #7E7E7E;
+}
+.tutoriel--violet i {
+  color: #9356DC;
+}
 
 h3 {
   font-family: "Roboto", sans-serif;
@@ -141,6 +176,9 @@ h3 {
 
 .cards-fonctionnement {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .restaurants {
@@ -159,6 +197,7 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-bottom: 18px;
+  position: relative;
 }
 .card img {
   -o-object-fit: cover;
@@ -190,6 +229,28 @@ h3 {
   font-size: 25px;
   color: black;
 }
+.card .clicked {
+  display: none;
+}
+.card .etiquette {
+  background-color: #99e2d0;
+  position: absolute;
+  display: flex;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  right: 15px;
+  top: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.card .etiquette h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #008766;
+}
 
 .restaurants-cards {
   margin: 5px 15px 30px 15px;
@@ -198,17 +259,28 @@ h3 {
   text-decoration: none;
 }
 
+.card-heart:hover i {
+  display: none;
+}
+.card-heart:hover .clicked {
+  display: inline;
+}
+
 .card-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  gap: 130px;
+  padding-right: 20px;
+  justify-content: space-between;
 }
 
 footer {
   background-color: #353535;
   padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 footer h5 {
   font-family: "Shrikhand";
@@ -218,22 +290,30 @@ footer h5 {
   text-align: left;
   margin: 0;
 }
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-footer li {
-  margin-bottom: 10px;
-}
-footer a {
+
+a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: white;
 }
-footer i {
+
+i {
   color: white;
   font-size: 16px;
   margin-right: 10px;
+}
+
+span {
+  font-weight: 300;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -2,6 +2,12 @@
 @import "colors";
 @import "mixins";
 
+/* Small devices (phones, less than 768px) */
+
+.main-container{
+    max-width: 767.98px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     margin: auto;
@@ -41,7 +47,7 @@ nav{
 }
 
 .colonne{
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
@@ -55,11 +61,11 @@ h2{
 
 button{
     @include button;
-        &:hover{
-            
-        }
+    &:hover{
+        opacity: 0.85;
+        filter: drop-shadow(0px 2px 4px rgb(0,0,0,70%));
+    }
 }
-
 
 main{
     h1{
@@ -91,25 +97,15 @@ main{
 }
 
 .tutoriel{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: baseline;
-    margin-left: 30px;
-    background-color: #F6F6F6;
-    border-radius: 20px;
-    filter: drop-shadow(0px 2px 4px rgb(0,0,0,15%));
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 70px;
-    margin-right: 20px;
-    margin-bottom: 25px;
-        i{
-            font-size: 20px;
-            color: #7E7E7E;
-        }    
+    @include tutoriel;
+        &--violet{
+            @include tutoriel;
+            i{
+                color: $primaire;
+            }
+        }
 }
+
 
 h3{
     @include h3;
@@ -129,7 +125,9 @@ h3{
 
 .cards-fonctionnement{
     margin-bottom: 30px;
-
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .restaurants{
@@ -148,6 +146,7 @@ h3{
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
+    position: relative;
         img{
             object-fit: cover;
             border-top-left-radius: 15px;
@@ -167,6 +166,24 @@ h3{
             font-size: 25px;
             color: black;
         }
+        .clicked{
+            display: none;
+        }
+        .etiquette{
+            background-color: $light-green;
+            position: absolute;
+            display: flex;
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            right: 15px;
+            top: 15px;
+            align-items: center;
+            justify-content: center;
+        h6{
+            @include h6;
+        }
+        }
 }
 
 .restaurants-cards{
@@ -176,26 +193,33 @@ h3{
         }
 }
 
+.card-heart:hover{
+    i{
+        display: none;
+    }
+    .clicked{
+        display: inline;
+    }
+}
+
 .card-content{
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap: 130px;
+    padding-right: 20px;
+    justify-content: space-between;
 }
 
 footer{
     background-color: #353535;
     padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     h5{
         @include h5;
     }
-    ul{
-        list-style-type: none;
-        padding-left: 0;
-    }
-    li{
-        margin-bottom: 10px;
     }
     a{
         text-decoration: none;
@@ -209,8 +233,18 @@ footer{
         font-size: 16px;
         margin-right: 10px;
     }
+    span{
+        font-weight: 300;
+    }
 
-}
 
 
-        
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .main-container{
+        width: 100%;
+    }
+}        
