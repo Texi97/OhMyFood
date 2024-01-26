@@ -4,10 +4,6 @@
 
 /* Small devices (phones, less than 768px) */
 
-.main-container{
-    max-width: 767.98px;
-}
-
 body{
     font-family: 'Roboto', sans-serif;
     margin: auto;
@@ -188,6 +184,8 @@ h3{
 
 .restaurants-cards{
     margin: 5px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
         a{
             text-decoration: none;
         }
@@ -242,9 +240,20 @@ footer{
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .main-container{
-        width: 100%;
-    }
+/* Tablette <1024px */
+@media (min-width: 768px) {
+   .restaurants-cards{
+    flex-flow: row wrap;
+    justify-content: space-around;
+        a{
+            width: 40%;
+        }
+   }
 }        
+
+
+/****** Media queries ***********/
+/* Desktop max 1440px */
+@media (min-width: 1024px) {
+
+ }  
