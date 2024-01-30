@@ -2,7 +2,7 @@
 @import "colors";
 @import "mixins";
 
-/* Small devices (phones, less than 768px) */
+/* Smartphone entre 320 et 767px */
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -68,24 +68,7 @@ main{
         text-align: left;
         padding: 40px 0px 20px 20px;
     }
-    ul{
-        list-style-type: none;
-        padding-left: 0;
-        margin-left: 20px;
-        position: absolute;
-        z-index: 1;
-        li{
-            padding: 5px 9px;
-            border-radius: 15px;
-            background-color: $primaire;
-            text-align: center;
-            color: white;
-            font-size: 14.18px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 70px;
-        }
-    }
+
 }
 
 .fonctionnement{
@@ -100,6 +83,7 @@ main{
                 color: $primaire;
             }
         }
+    position: relative;
     p{
         padding: 5px 9px;
             border-radius: 15px;
@@ -109,6 +93,9 @@ main{
             font-size: 14.18px;
             font-weight: 500;
             font-family: 'Roboto', sans-serif;
+            position: absolute;
+            left: -15px;
+            top: 8px;
     }
     &--violet p{
         padding: 5px 9px;
@@ -119,6 +106,9 @@ main{
             font-size: 14.18px;
             font-weight: 500;
             font-family: 'Roboto', sans-serif;
+            position: absolute;
+            left: -15px;
+            top: 8px
     }
 }
 
@@ -301,6 +291,18 @@ footer{
 
     .cards-fonctionnement{
         flex-direction: row;
+    }
+
+    .restaurants{
+        padding-left: 140px;
+        padding-right: 140px;
+        h1{
+            padding-left: 0px;
+        }
+    }
+
+    .restaurants-cards{
+        margin: 5px 0px 30px;
     }
 
  }  
