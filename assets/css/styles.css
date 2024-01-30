@@ -149,6 +149,26 @@ main ul li {
 .tutoriel--violet i {
   color: #9356DC;
 }
+.tutoriel p {
+  padding: 5px 9px;
+  border-radius: 15px;
+  background-color: #9356DC;
+  text-align: center;
+  color: white;
+  font-size: 14.18px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.tutoriel--violet p {
+  padding: 5px 9px;
+  border-radius: 15px;
+  background-color: #9356DC;
+  text-align: center;
+  color: white;
+  font-size: 14.18px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
 
 h3 {
   font-family: "Roboto", sans-serif;
@@ -320,4 +340,27 @@ span {
   }
 }
 /****** Media queries ***********/
-/* Desktop max 1440px *//*# sourceMappingURL=styles.css.map */
+/* Desktop max 1440px */
+@media (min-width: 1024px) {
+  .fonctionnement h1 {
+    padding-left: 140px;
+  }
+  .alignement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .numeros ul {
+    margin-left: auto;
+    display: flex;
+    gap: 338px;
+  }
+  .tutoriel {
+    margin-left: 15px;
+  }
+  .tutoriel--violet {
+    margin-left: 15px;
+  }
+  .cards-fonctionnement {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=styles.css.map */

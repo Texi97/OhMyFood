@@ -100,6 +100,26 @@ main{
                 color: $primaire;
             }
         }
+    p{
+        padding: 5px 9px;
+            border-radius: 15px;
+            background-color: $primaire;
+            text-align: center;
+            color: white;
+            font-size: 14.18px;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+    }
+    &--violet p{
+        padding: 5px 9px;
+            border-radius: 15px;
+            background-color: $primaire;
+            text-align: center;
+            color: white;
+            font-size: 14.18px;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+    }
 }
 
 
@@ -242,7 +262,8 @@ footer{
 /****** Media queries ***********/
 /* Tablette <1024px */
 @media (min-width: 768px) {
-   .restaurants-cards{
+   
+    .restaurants-cards{
     flex-flow: row wrap;
     justify-content: space-around;
         a{
@@ -255,5 +276,31 @@ footer{
 /****** Media queries ***********/
 /* Desktop max 1440px */
 @media (min-width: 1024px) {
+    
+    .fonctionnement h1{
+        padding-left: 140px;
+    }
+
+    .alignement{
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+
+    .numeros ul{
+        margin-left: auto;
+        display: flex;
+        gap: 338px;
+    }
+
+    .tutoriel{
+        margin-left: 15px;
+        &--violet{
+            margin-left: 15px;
+        }
+    }
+
+    .cards-fonctionnement{
+        flex-direction: row;
+    }
 
  }  
