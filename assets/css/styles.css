@@ -234,8 +234,9 @@ h3 {
   font-size: 25px;
   color: black;
 }
-.card .clicked {
+.card svg {
   display: none;
+  height: 25px;
 }
 .card .etiquette {
   background-color: #99e2d0;
@@ -266,10 +267,10 @@ h3 {
   text-decoration: none;
 }
 
-.card-heart:hover i {
+.card-rating:hover i {
   display: none;
 }
-.card-heart:hover .clicked {
+.card-rating:hover svg {
   display: inline;
 }
 
