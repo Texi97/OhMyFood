@@ -1,0 +1,39 @@
+/* restaurant 1 */
+
+.restaurant-image{
+    img{
+        width: 100%;
+    }
+}
+
+.main-restaurant{
+    background-color: #F6F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    h1{
+        @include h1-restaurant;
+    }
+}
+
+.heart-restaurant{
+    padding-right: 15px;
+    i{
+        font-size: 30px;
+        color: black;
+    }
+    svg{
+        width: 30px;
+        display: none;
+    }
+    &:hover{
+        svg{
+            display: inline-block;
+            
+        }
+        i{
+            display: none;
+        }
+    }
+}

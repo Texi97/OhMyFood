@@ -1,0 +1,36 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  background-color: #f6f6f6;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+nav img {
+  width: 197px;
+  align-self: center;
+  padding: 25px 0 20px 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+nav section {
+  background-color: #EAEAEA;
+  height: 50px;
+  align-items: center;
+  gap: 17px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+}
+nav section p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+nav section i {
+  color: #353535;
+}/*# sourceMappingURL=restaurant.css.map */
