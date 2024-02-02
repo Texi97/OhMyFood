@@ -88,6 +88,7 @@ body {
     p {
         padding: 0px 30px 0px 30px;
         text-align: center;
+        font-weight: 300;
     }
 }
 
@@ -290,50 +291,60 @@ h3 {
 
 footer {
     background-color: #353535;
-    padding: 30px 15px;
+    padding: 22px 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
+    gap: 16px;
+    .footer__container{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    i{
+        height: 16px;
+        width: 16px;
+    }
+    .icon-text{
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+    }
     h5 {
         @include h5;
     }
+    a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+    }
+    span {
+        font-weight: 300;
+    }
 }
 
-a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-}
-
-
-span {
-    font-weight: 300;
-}
-
-
-
-/****** Media queries ***********/
 /* Version tablette */
 @media (min-width: 768.1px) and (max-width: 1023.9px) {
 
-    .restaurants-cards {
-        flex-flow: row wrap;
-        justify-content: space-around;
-
-        a {
-            width: 40%;
-        }
+    .fonctionnement .cards-fonctionnement{
+        padding: 0px 80px 0px 80px;
     }
-
-    footer {
-        flex-direction: row;
-        justify-content: space-around;
-
-        h5 {
-            order: 1;
+    .restaurants{
+        width: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .restaurants-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 40px;
+        }
+        .restaurants-cards__link{
+            width: 44.5%;
         }
     }
 }
@@ -343,52 +354,66 @@ span {
 /* Version Bureau */
 @media (min-width: 1024px) {
 
-    .fonctionnement h1 {
-        padding-left: 140px;
+    header{
+        height: 96px;
     }
-
-    .alignement {
-        padding-left: 140px;
-        padding-right: 140px;
-    }
-
-    .numeros ul {
-        margin-left: auto;
-        display: flex;
-        gap: 338px;
-    }
-
-    .tutoriel {
-        margin-left: 15px;
-
-        &--violet {
-            margin-left: 15px;
+    .reservation {
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 18px;
+        }
+        .button-general{
+            margin-bottom: 15px;
         }
     }
-
-    .cards-fonctionnement {
-        flex-direction: row;
-    }
-
-    .restaurants {
-        padding-left: 140px;
-        padding-right: 140px;
-
-        h1 {
-            padding-left: 0px;
+    .fonctionnement{
+        .content{
+            margin: auto;
+            max-width: 1080px;
+        }
+        .cards-fonctionnement{
+            flex-direction: row;
+        }
+        .choice__bloc{
+            width: 90%;
         }
     }
-
-    .restaurants-cards {
-        margin: 5px 0px 30px;
-    }
-
-    footer {
-        justify-content: end;
-        padding-right: 60px;
-
-        h5 {
-            margin-left: 30px;
+    .restaurants{
+        width: auto;
+        .content{
+            max-width: 1080px;
+            margin: auto;
+        }
+        .restaurants-cards{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 50px;
+        }
+        .restaurants-cards__link{
+            width: 47%;
         }
     }
+    footer{
+        flex-direction: row-reverse;
+        gap: 90px;
+        padding: 60px 60px 30px 25px;
+        align-items: center;
+        .footer__container{
+            flex-direction: row;
+            gap: 20px;
+        }
+        .icon-text{
+            gap: 11px;
+            &:last-of-type{
+                margin-right: 40px;
+            }
+        }
+
+    }
+ 
+
 }

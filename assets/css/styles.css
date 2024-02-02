@@ -77,6 +77,7 @@ body {
 .reservation p {
   padding: 0px 30px 0px 30px;
   text-align: center;
+  font-weight: 300;
 }
 
 .button-general {
@@ -270,9 +271,24 @@ h3 {
 
 footer {
   background-color: #353535;
-  padding: 30px 15px;
+  padding: 22px 25px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+footer .footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer i {
+  height: 16px;
+  width: 16px;
+}
+footer .icon-text {
+  display: flex;
+  align-items: center;
+  color: white;
   gap: 10px;
 }
 footer h5 {
@@ -283,76 +299,96 @@ footer h5 {
   text-align: left;
   margin: 0;
 }
-
-a {
+footer a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: white;
 }
-
-span {
+footer span {
   font-weight: 300;
 }
 
-/****** Media queries ***********/
 /* Version tablette */
 @media (min-width: 768.1px) and (max-width: 1023.9px) {
-  .restaurants-cards {
-    flex-flow: row wrap;
-    justify-content: space-around;
+  .fonctionnement .cards-fonctionnement {
+    padding: 0px 80px 0px 80px;
   }
-  .restaurants-cards a {
-    width: 40%;
+  .restaurants {
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
-  footer {
+  .restaurants .restaurants-cards {
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 40px;
   }
-  footer h5 {
-    order: 1;
+  .restaurants .restaurants-cards__link {
+    width: 44.5%;
   }
 }
 /****** Media queries ***********/
 /* Version Bureau */
 @media (min-width: 1024px) {
-  .fonctionnement h1 {
-    padding-left: 140px;
+  header {
+    height: 96px;
   }
-  .alignement {
-    padding-left: 140px;
-    padding-right: 140px;
+  .reservation h1 {
+    font-size: 40px;
   }
-  .numeros ul {
-    margin-left: auto;
-    display: flex;
-    gap: 338px;
+  .reservation p {
+    font-size: 18px;
   }
-  .tutoriel {
-    margin-left: 15px;
+  .reservation .button-general {
+    margin-bottom: 15px;
   }
-  .tutoriel--violet {
-    margin-left: 15px;
+  .fonctionnement .content {
+    margin: auto;
+    max-width: 1080px;
   }
-  .cards-fonctionnement {
+  .fonctionnement .cards-fonctionnement {
     flex-direction: row;
   }
+  .fonctionnement .choice__bloc {
+    width: 90%;
+  }
   .restaurants {
-    padding-left: 140px;
-    padding-right: 140px;
+    width: auto;
   }
-  .restaurants h1 {
-    padding-left: 0px;
+  .restaurants .content {
+    max-width: 1080px;
+    margin: auto;
   }
-  .restaurants-cards {
-    margin: 5px 0px 30px;
+  .restaurants .restaurants-cards {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+  .restaurants .restaurants-cards__link {
+    width: 47%;
   }
   footer {
-    justify-content: end;
-    padding-right: 60px;
+    flex-direction: row-reverse;
+    gap: 90px;
+    padding: 60px 60px 30px 25px;
+    align-items: center;
   }
-  footer h5 {
-    margin-left: 30px;
+  footer .footer__container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  footer .icon-text {
+    gap: 11px;
+  }
+  footer .icon-text:last-of-type {
+    margin-right: 40px;
   }
 }/*# sourceMappingURL=styles.css.map */
