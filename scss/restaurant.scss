@@ -1,6 +1,6 @@
 @import url(assets/);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-@import url(keyframes.scss);
+@import "keyframes";
 
 body {
     margin: 0px;
@@ -54,10 +54,7 @@ main {
     background-color: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-    a{
-        padding-bottom: 50px;
-        margin-bottom: -55px;
-    }
+
 }
 
 .menu-title {
@@ -151,6 +148,7 @@ main {
         align-items: center;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         overflow: hidden;
+        cursor: pointer;
         &:hover .menu-valid {
             margin-right: 0px;
         }
@@ -248,15 +246,21 @@ main {
     font-size: 16px;
     font-weight: 500;
     color: white;
-    margin-top: 40px;
-    margin-bottom: -10px;
     width: 218px;
+    cursor: pointer;
 }
 
-a {
+.button-cmd {
     display: flex;
     justify-content: center;
     text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: -55px;
+    padding-bottom: 40px;
+    &:hover {
+        opacity: 0.85;
+        filter: drop-shadow(0px 2px 4px rgb(0, 0, 0, 70%));
+    }
 }
 
 footer {
@@ -310,24 +314,19 @@ footer {
 .anim--1{
     animation: fadein 2s;
     animation-delay: 200ms;
+    animation-fill-mode: forwards;
 }
 .anim--2{
     animation: fadein 2s;
     animation-delay: 400ms;
+    animation-fill-mode: forwards;
 }
 .anim--3{
     animation: fadein 2s;
     animation-delay: 600ms;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
 /* Version tablette */
 @media (min-width: 768.1px) and (max-width: 1023.9px) {
