@@ -90,6 +90,11 @@ body {
         text-align: center;
         font-weight: 300;
     }
+
+    a {
+        text-decoration: none;
+
+    }
 }
 
 .button-general {
@@ -246,10 +251,12 @@ h3 {
             font-weight: 300;
             justify-content: space-between;
             align-items: center;
-            h3{
+
+            h3 {
                 margin-bottom: 0px;
             }
-            p{
+
+            p {
                 margin-top: 5px;
             }
         }
@@ -261,21 +268,25 @@ h3 {
         font-size: 22px;
         position: relative;
         cursor: pointer;
-        &:hover > .heart{
+
+        &:hover>.heart {
             opacity: 0;
             transition: opacity 300ms;
             transition-delay: 200ms;
         }
-        &:hover > .heart-gradient{
+
+        &:hover>.heart-gradient {
             opacity: 1;
             transition: opacity 500ms;
             transform-origin: center bottom;
             animation-name: anim-heart;
             animation-duration: 500ms;
         }
-        &:not(:focus) > .heart-gradient{
+
+        &:not(:focus)>.heart-gradient {
             transition: opacity 500ms;
         }
+
         .heart {
             position: absolute;
             top: 0px;
@@ -301,24 +312,29 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    .footer__container{
+
+    .footer__container {
         display: flex;
         flex-direction: column;
         gap: 7px;
     }
-    i{
+
+    i {
         height: 16px;
         width: 16px;
     }
-    .icon-text{
+
+    .icon-text {
         display: flex;
         align-items: center;
         color: white;
         gap: 10px;
     }
+
     h5 {
         @include h5;
     }
+
     a {
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
@@ -326,6 +342,7 @@ footer {
         font-weight: 500;
         color: white;
     }
+
     span {
         font-weight: 300;
     }
@@ -334,13 +351,15 @@ footer {
 /* Version tablette */
 @media (min-width: 768.1px) and (max-width: 1023.9px) {
 
-    .fonctionnement .cards-fonctionnement{
+    .fonctionnement .cards-fonctionnement {
         padding: 0px 80px 0px 80px;
     }
-    .restaurants{
+
+    .restaurants {
         width: auto;
         padding-top: 30px;
         padding-bottom: 30px;
+
         .restaurants-cards {
             flex-direction: row;
             flex-wrap: wrap;
@@ -349,7 +368,8 @@ footer {
             column-gap: 20px;
             row-gap: 40px;
         }
-        .restaurants-cards__link{
+
+        .restaurants-cards__link {
             width: 44.5%;
         }
     }
@@ -359,66 +379,80 @@ footer {
 /* Version Bureau */
 @media (min-width: 1024px) {
 
-    header{
+    header {
         height: 96px;
     }
+
     .reservation {
-        h1{
+        h1 {
             font-size: 40px;
         }
-        p{
+
+        p {
             font-size: 18px;
         }
-        .button-general{
+
+        .button-general {
             margin-bottom: 15px;
         }
     }
-    .fonctionnement{
-        .content{
+
+    .fonctionnement {
+        .content {
             margin: auto;
             max-width: 1080px;
         }
-        .cards-fonctionnement{
+
+        .cards-fonctionnement {
             flex-direction: row;
         }
-        .choice__bloc{
+
+        .choice__bloc {
             width: 90%;
         }
     }
-    .restaurants{
+
+    .restaurants {
         width: auto;
-        .content{
+
+        .content {
             max-width: 1080px;
             margin: auto;
         }
-        .restaurants-cards{
+
+        .restaurants-cards {
             flex-direction: row;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             row-gap: 50px;
         }
-        .restaurants-cards__link{
+
+        .restaurants-cards__link {
             width: 47%;
         }
     }
-    footer{
+
+    footer {
         flex-direction: row-reverse;
         gap: 90px;
         padding: 60px 60px 30px 25px;
         align-items: center;
-        .footer__container{
+
+        .footer__container {
             flex-direction: row;
             gap: 20px;
         }
-        .icon-text{
+
+        .icon-text {
             gap: 11px;
-            &:last-of-type{
+
+            &:last-of-type {
                 margin-right: 40px;
             }
         }
 
     }
- 
+
 
 }

@@ -79,6 +79,9 @@ body {
   text-align: center;
   font-weight: 300;
 }
+.reservation a {
+  text-decoration: none;
+}
 
 .button-general {
   background: linear-gradient(#FF79DA, #9356DC);
