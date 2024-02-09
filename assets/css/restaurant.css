@@ -9,6 +9,36 @@
     opacity: 1;
   }
 }
+/* Animation de rotation du cercle du loader */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Animation d'apparition du loader */
+@keyframes anim-loader {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
 body {
   margin: 0px;
   padding: 0px;

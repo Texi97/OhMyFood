@@ -1,4 +1,43 @@
+/* Animation d'apparition du menu */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Animation de rotation du cercle du loader */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Animation d'apparition du loader */
+@keyframes anim-loader {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
 /* Smartphone entre 320 et 767px */
 /* Index */
 header {
@@ -318,6 +357,47 @@ footer a {
 }
 footer span {
   font-weight: 300;
+}
+
+/* Loader */
+.loader {
+  position: absolute;
+  background-color: #353535;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  opacity: 0;
+  animation-name: anim-loader;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.loader__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.loader__title {
+  font-family: Shrikhand;
+  font-size: 70px;
+  font-weight: 400;
+  color: white;
+}
+.loader__anim {
+  width: 80px;
+  height: 80px;
+  border: 15px solid #FF79DA;
+  border-bottom-color: #9356DC;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
 /* Version tablette */
