@@ -1,7 +1,5 @@
-# OhMyFood
-Projet n°4
+# OhMyFood 🍔
 
-Projet commencé le lundi 22 janvier.
 
 Objectifs du projet : 
  - Développer le site pour mobile, tablette et desktop en s’appuyant rigoureusement sur les informations déterminées dans le brief créatif.
